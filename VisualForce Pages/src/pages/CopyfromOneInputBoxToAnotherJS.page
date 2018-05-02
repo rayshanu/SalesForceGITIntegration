@@ -1,0 +1,27 @@
+<apex:page id="page">
+  <apex:form id="form">
+  <apex:pageblock id="pageBlock">
+  
+  
+  <apex:pageBlockSection id="pageBlockSectin1">
+  <apex:inputText id="name"/>
+  </apex:pageBlockSection>
+  
+  
+  <apex:pageblockSection id="pageBlockSectin2">
+   <apex:inputText id="copyName"/>  
+  </apex:pageblockSection>
+   <apex:commandButton value="Click" oncomplete="show()"/>
+  </apex:pageblock>
+  </apex:form>
+  
+  
+  <script>
+  function show(){
+  var name=document.getElementById('{!$Component.form.pageBlock.pageBlockSectin1.name}').value;
+  document.getElementById('page:form:pageBlock:pageBlockSectin2:copyName').value=name;
+  }
+  </script>
+
+  
+</apex:page>

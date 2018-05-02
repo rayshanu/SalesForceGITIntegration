@@ -1,0 +1,48 @@
+<apex:page standardController="Account">
+	<apex:form >
+  Input Text : <apex:inputText />
+		<br />
+		<br />
+  Input Field : <apex:inputField value="{! Account.Industry}" />
+		<br />
+		<br />
+  Password: <apex:inputSecret />
+		<br />
+		<br />
+  Text Area of 30 Columns<apex:inputTextarea cols="50" />
+		<br />
+		<br />
+  Book <apex:inputCheckbox />
+  Pen <apex:inputCheckbox />
+  Pencil <apex:inputCheckbox />
+		<br />
+		<br />
+  
+  Select Month
+  <apex:selectList size="1">
+			<apex:selectOption itemLabel="None" itemvalue="None"></apex:selectOption>
+			<apex:selectOption itemLabel="January" itemValue="one"></apex:selectOption>
+			<apex:selectOption itemLabel="February" itemvalue="two"></apex:selectOption>
+			<apex:selectOption itemlabel="March" itemvalue="three"></apex:selectOption>
+			<apex:selectOption itemlabel="April" itemvalue="four"></apex:selectOption>
+		</apex:selectList>
+
+		<apex:selectCheckboxes >
+			<apex:selectOption itemLabel="None" itemvalue="None"></apex:selectOption>
+			<apex:selectOption itemLabel="January" itemValue="one"></apex:selectOption>
+			<apex:selectOption itemLabel="February" itemvalue="two"
+				itemDisabled="true"></apex:selectOption>
+			<apex:selectOption itemlabel="March" itemvalue="three"></apex:selectOption>
+			<apex:selectOption itemlabel="April" itemvalue="four"></apex:selectOption>
+		</apex:selectCheckboxes>
+
+		<apex:selectRadio >
+			<apex:selectOption itemLabel="None" itemvalue="None"></apex:selectOption>
+			<apex:selectOption itemLabel="January" itemValue="one"></apex:selectOption>
+			<apex:selectOption itemLabel="February" itemvalue="two"></apex:selectOption>
+			<apex:selectOption itemlabel="March" itemvalue="three"
+				itemDisabled="true"></apex:selectOption>
+			<apex:selectOption itemlabel="April" itemvalue="four"></apex:selectOption>
+		</apex:selectRadio>
+	</apex:form>
+</apex:page>

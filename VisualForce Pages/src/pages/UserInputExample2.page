@@ -1,0 +1,35 @@
+<apex:page >
+  <apex:form >
+  <apex:pageblock title="Form">
+  
+  Name:<apex:inputText id="name"/><br/><br/>
+  
+  Phone:<apex:inputText id="phone"/><br/><br/>
+  
+  Address:<apex:inputTextarea id="address" rows="5" cols="30"/><br/><br/>
+  
+  City: <apex:selectList size="1">
+  <apex:selectOption itemlabel="None" itemvalue="one"/>
+  <apex:selectOption itemlabel="Noida" itemvalue="two"/>
+  <apex:selectOption itemlabel="Chennai" itemvalue="three"/>
+  <apex:selectOption itemlabel="Mumbai" itemvalue="four"/>
+  <apex:selectOption itemlabel="Pune" itemvalue="five"/>
+  </apex:selectList><br/><br/>
+  
+  Gender : 
+  <apex:selectRadio >
+  <apex:SelectOption itemLabel="Male" itemValue="gender1"></apex:SelectOption>
+  <apex:selectOption itemLabel="Female" itemValue="gender2"></apex:selectOption>
+  </apex:selectRadio>
+  
+  Courses:
+  <Apex:selectCheckboxes >
+  <apex:selectOption itemLabel="Java" itemvalue="course1"/>
+  <apex:selectOption itemLabel="SFDC" itemvalue="course2"/>
+  <apex:selectOption itemLabel="HADOOP" itemvalue="course3"/>
+  </Apex:selectCheckboxes>
+  
+  
+  </apex:pageblock>
+  </apex:form>
+</apex:page>

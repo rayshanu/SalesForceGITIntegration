@@ -1,0 +1,10 @@
+<apex:page standardController="Job_Application__c" showheader="false" sidebar="false" recordSetVar="applications">
+  <apex:sectionHeader title="Mass Update status of Job Applications"/>
+  <apex:form >
+  <apex:commandButton value="Save" action="{!save}"/>
+  <apex:commandButton value="Cancel" action="{!cancel}"/>
+   <apex:pageBlock >
+   
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

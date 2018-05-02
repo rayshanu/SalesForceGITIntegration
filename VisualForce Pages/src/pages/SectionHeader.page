@@ -1,0 +1,34 @@
+<apex:page standardController="Account">
+  <apex:sectionHeader title="First Page" subtitle="Page about VisualForce" description="VisualForce Components Description" 
+   help="https://www.google.co.in/"/>
+   <br/>
+   {!10}<br/>
+   {!10+20}<br/>
+   {!'Chandra' +'Mouli'+'Ray'}<br/>
+   <br/>
+   <h1>Global Data </h1><br/>
+   {! $User.FirstName}<br/>
+   {! $User.LastName}<br/>
+   {! $Organization.Name}<br/>
+   {! $Profile.Name}<br/>
+   
+   {! $CurrentPage.parameters.Name}
+   {! $CurrentPage.parameters.Age}
+   <br/>
+   <h1>Standard Controller Data</h1>
+   Account Number is :  {! Account.AccountNumber}<br/>
+   Description is : {! Account.Description}
+   
+   <h1>Apex Output Field</h1><br/>
+   <apex:form >
+   <apex:inlineEditSupport >
+   <apex:outputLabel value="UserName"/><br/>
+   <apex:outputLabel >Password</apex:outputLabel><br/>
+   <apex:outputLabel value="{!Account.Name}"></apex:outputLabel><br/>
+   <apex:outputField value="{!Account.Name}"></apex:outputField><br/>
+   </apex:inlineEditSupport>
+   </apex:form>
+   
+
+   
+</apex:page>

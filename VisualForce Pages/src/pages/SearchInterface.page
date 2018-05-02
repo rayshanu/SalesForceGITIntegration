@@ -1,0 +1,27 @@
+<apex:page controller="SearchInterfaceApexCode">
+<apex:form >
+  <apex:pageblock title="Search Interface">
+  <Apex:pageblockSection >
+   <apex:pageblockSectionItem >
+   <apex:outputLabel value="Search"></apex:outputLabel>
+   <apex:inputText value="{!keyword}"/>
+   </apex:pageblockSectionItem>
+  </apex:pageblockSection>
+  
+  
+  <apex:pageBlockButtons >
+  <apex:commandButton value="Search" action="{!search_now}"/>
+  <apex:commandButton value="Reset"/>
+  </apex:pageBlockButtons>
+  
+  <apex:pageblockTable value="{!results}" var="r">
+  <apex:column value="{!r.Name}" />
+  <apex:column value="{!r.Type}" />
+  <apex:column value="{!r.Industry}" />
+  <apex:column value="{!r.Fax}" />
+  
+  </apex:pageblockTable>
+  
+  </apex:pageblock> 
+  </apex:form>
+</apex:page>

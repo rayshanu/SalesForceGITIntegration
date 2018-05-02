@@ -1,0 +1,13 @@
+<apex:page controller="UserInputFromVisualForce">
+  <apex:form >
+  <apex:pageblock title="Add Two Number">
+  
+  First Number : <apex:inputText value="{!firstValue}"/><br/><br/>
+  Second Number: <apex:inputText value="{!secondValue}"/><br/><br/>
+  Result: <apex:inputText value="{!resultValue}" id="res"/><br/><br/>
+  <apex:commandButton value="Submit" action="{!submit}" reRender="res"/>
+  <apex:commandButton value="Reset" action="{!reset}"/>
+  
+  </apex:pageblock>  
+  </apex:form>
+</apex:page>

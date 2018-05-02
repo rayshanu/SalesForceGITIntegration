@@ -1,0 +1,19 @@
+<apex:page controller="UserInputVisualForcePage2">
+  <apex:sectionHeader title="{!title}"/>
+  <apex:form >
+  <Apex:pageblock title="{!title}">
+  Name:<apex:inputText id="name"/><br/><br/>
+  
+  <apex:selectList size="1" value="{!selected}">
+  <apex:selectOption itemLabel="None" itemvalue="option1"/>
+  <apex:selectOption itemLabel="Noida" itemvalue="option2"/>
+  <apex:selectOption itemLabel="Chennai" itemvalue="option3"/>
+  <apex:selectOption itemLabel="Gurgaon" itemvalue="option4"/>
+  </apex:selectList><br/><br/>
+  <apex:commandButton value="Submit" action="{!submit}"/>
+  
+  
+  </Apex:pageblock>
+  
+  </apex:form>
+</apex:page>

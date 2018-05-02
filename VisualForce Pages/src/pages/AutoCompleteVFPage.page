@@ -1,0 +1,27 @@
+<apex:page controller="AutoCompleteAccount" tabstyle="Account">
+  <apex:form id="form">
+  <apex:pageBlock >
+  <apex:messages />
+  <c:AutoCompleteComponent />
+  <apex:actionFunction name="showInfoForAccount" action="{!showAccountDetail}" reRender="form">
+  <apex:param assignTo="{!selectedAccountId}" name="selectedAccountId" value=""/> 
+  </apex:actionFunction>
+  
+  <apex:pageblockSection collapsible="true" title="Account Deatil" rendered="{!accountDetailVisible}">
+  <apex:outputField value="{!selectedAccount.Name}"/>
+  <apex:outputField value="{!selectedAccount.AccountNumber}"/>
+  <apex:outputField value="{!selectedAccount.Website}"/>
+  <apex:outputField value="{!selectedAccount.Phone}"/>
+  <apex:outputField value="{!selectedAccount.Fax}"/>
+  </apex:pageblockSection>
+  
+  </apex:pageBlock>
+  </apex:form>
+  
+  <script>
+   function showAccountDetail(accountId){
+   showInfoForAccount(accountId);
+   }
+  </script>
+  
+</apex:page>

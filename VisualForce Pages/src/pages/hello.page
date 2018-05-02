@@ -1,0 +1,22 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your First Page: Hello !!
+  <!-- End Default Content REMOVE THIS -->
+  
+  <apex:pageBlock title="First Page Block">
+    <h1>An area of a page that uses styling similar to the appearance of a Salesforce detail page, but without any default content.</h1><br/>
+    First Name of the Person Logged in : {! $User.FirstName} <br/>
+    Last Name of the Person Logged in : {!$User.LastName}<br/>
+    Full name : {!$User.Username}<br/>
+    Thank you : {!$User.FirstName & ' ' & $User.LastName}<br/>
+    Today's Date is : {! today()}
+  </apex:pageBlock>
+  
+  <apex:pageBlock >
+               <apex:pageBlockSection title="Page Block Section">
+                     A section of data within an "Apex Page Block component", similar to a section in a standard Salesforce page layout definition.
+              </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+</apex:page>

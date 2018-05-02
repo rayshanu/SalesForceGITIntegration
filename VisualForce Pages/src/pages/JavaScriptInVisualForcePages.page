@@ -1,0 +1,35 @@
+<apex:page >
+
+<script>
+function show(){
+alert('This is Java Script');
+}
+</script>
+
+<script>
+function change(){
+alert('Data is Changed !!');
+}
+</script>
+
+
+  <apex:form >
+  
+  <apex:outputLabel value="Name"></apex:outputLabel>
+  <apex:inputText id="name" onchange="change()"/><br/>
+  <apex:CommandButton value="Click" onclick="show()"/>
+  
+  </apex:form>
+  
+  <apex:form >
+  <apex:inputtext id="job" onchange="showJob()"/>
+  <script>
+  function showJob(){
+  var myJob=document.getElementById('{!$Component.job}').value;
+  alert(myJob);
+  }
+  </script>
+  </apex:form>
+  
+  
+</apex:page>

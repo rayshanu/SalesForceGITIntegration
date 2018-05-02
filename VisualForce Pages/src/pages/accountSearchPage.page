@@ -1,0 +1,89 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" title="Search Account">
+
+<style>
+
+ .headerDiv
+        {
+            background: #fff url(/img/alohaSkin/lookup_bg.png) repeat-x;
+            padding: 10px;
+            font-family: Arial,Helvetica,sans-serif;
+            color: #222;
+            background-repeat: repeat-x;
+            background-position: left top;
+            font-size: 75%;
+            display: block;
+        }
+        
+        .lookupImgae
+        {
+            margin-top: 5px;
+            background-image: url(/Libraries/Pictures/1.jpg);
+            background-position: 0 -1202px;
+            width: 32px;
+            height: 32px;
+            display: inline;
+            float: left;
+            margin-right: 5px;
+            border: 0;
+            color: #000;
+        }
+
+        .heading1Style
+        {
+            font-size: 1.8em;
+            color: #333435;
+            margin: 8px 0 4px;
+            font-weight: bold;
+            -webkit-margin-before: 0.67em;
+            -webkit-margin-after: 0.67em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+</style>
+
+<script>
+
+       function fillIn(name, id){
+            window.opener.setChildValue(name, id);
+            window.close();
+            return false;
+      }
+</script>
+
+
+<apex:messages />
+    <apex:form >
+        <div class="headerDiv">
+            <div style="margin:0;">
+                <div class="border-color: #737e96;overflow: hidden;">
+                    <div class="padding-left: 0;float: left;vertical-align: middle;width: 70%;color: #000;">
+                        <img src="/s.gif" alt="" class="lookupImgae" title="" />
+                        <h1 class="heading1Style">Lookup</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div style="width 100%">
+</div>
+
+<apex:pageBlock >
+
+<apex:pageBlockSection columns="1">
+ 
+ <apex:pageBlockSectionItem helpText="Account name">
+ <apex:outputLabel >Account Name</apex:outputLabel>  
+ </apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >
+ <apex:inputField value="{!Account.Name}"/>
+ <apex:outputField value="{!Account.Type}"/>
+ </apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >
+ <apex:commandButton action="{!List}" value="Go" immediate="True"/>
+ </apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

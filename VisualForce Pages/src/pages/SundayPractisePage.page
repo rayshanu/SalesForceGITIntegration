@@ -1,0 +1,33 @@
+<apex:page id="page">
+  <apex:form id="form">
+  <apex:pageblock id="pageBlock" title="Copy from one Input box to Another">
+  
+  
+  
+  <apex:pageBlockSection id="section1">
+  <apex:inputText id="name"/>
+  </apex:pageBlockSection>
+  
+  
+  <apex:pageblockSection id="section2">
+  <apex:inputText id="copyName"/>
+  </apex:pageblockSection>
+  </apex:pageblock>
+  
+  <apex:commandButton value="Copy" onclick="demo()" oncomplete="show()"/>
+  
+  </apex:form>
+  
+  <script>
+  function show(){
+  var name=document.getElementById('{!$Component.form.pageBlock.section1.name}').value;
+  document.getElementById('page:form:pageBlock:section2:copyName').value=name;
+  }
+  
+  function demo(){
+  alert('Button is Clicked !!');
+  }
+  
+  </script>
+  
+</apex:page>
